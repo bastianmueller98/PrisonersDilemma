@@ -1,12 +1,12 @@
 from Game import Game
-from TitForTatStrategy import TitForTatStrategy
-from AlwaysDefectStrategy import AlwaysDefectStrategy
+from strategies.TitForTatStrategy import TitForTatStrategy
+from strategies.AlwaysDefectStrategy import AlwaysDefectStrategy
 
 
 def main():
     # Initialize game
-    game = Game("C", "D")
-    print(game.history[-1].payoffs)
+    game = Game()
+    # print(game.history[-1].payoffs)
 
     # Initialize players/strategies
     player1 = TitForTatStrategy(1)
@@ -18,8 +18,8 @@ def main():
         move1 = player1.play(game)
         move2 = player2.play(game)
         game.play(move1, move2)
-        print(game.history[-1].payoffs)
-    
+        # print(game.history[-1].payoffs)
+
     # End game and print results
     print(game.end_game())
 

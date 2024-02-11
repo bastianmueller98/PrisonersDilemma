@@ -1,5 +1,5 @@
 from Game import Game
-from Strategy import Strategy
+from strategies.Strategy import Strategy
 
 
 class TitForTatStrategy(Strategy):

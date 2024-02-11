@@ -1,4 +1,4 @@
-from Strategy import Strategy
+from strategies.Strategy import Strategy
 from Game import Game
 
 

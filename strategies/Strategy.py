@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from Game import Game
 
+
 class Strategy(ABC):
     @abstractmethod
     def __init__(self, player_number: int) -> None:
