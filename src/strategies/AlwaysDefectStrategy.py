@@ -1,5 +1,5 @@
-from strategies.Strategy import Strategy
-from Game import Game
+from src.strategies.Strategy import Strategy
+from src.Game import Game
 
 
 class AlwaysDefectStrategy(Strategy):

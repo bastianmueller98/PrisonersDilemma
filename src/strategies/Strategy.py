@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from Game import Game
+from src.Game import Game
 
 
 class Strategy(ABC):

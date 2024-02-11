@@ -1,4 +1,4 @@
-from GameState import GameState
+from src.GameState import GameState
 from random import choice
 import matplotlib.pyplot as plt
 

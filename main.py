@@ -1,9 +1,9 @@
-from Game import Game
-from strategies.ProbabilityCooperator import ProbabilityCooperator
-from strategies.TFTT import TFTTStrategy
-from strategies.TitForTatStrategy import TitForTatStrategy
-from strategies.AlwaysDefectStrategy import AlwaysDefectStrategy
-from strategies.nPavlov import nPavlov
+from src.Game import Game
+from src.strategies.ProbabilityCooperator import ProbabilityCooperator
+from src.strategies.TFTT import TFTTStrategy
+from src.strategies.TitForTatStrategy import TitForTatStrategy
+from src.strategies.AlwaysDefectStrategy import AlwaysDefectStrategy
+from src.strategies.nPavlov import nPavlov
 
 
 def main():
