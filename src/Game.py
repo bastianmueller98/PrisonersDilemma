@@ -130,6 +130,9 @@ class Game:
 
             plt.show()
 
+        self.player1_total_payoff = sum([x.payoffs[0] for x in self.history])
+        self.player2_total_payoff = sum([x.payoffs[1] for x in self.history])
+
         return f"""End result after {len(self.history)} rounds:
     Player 1 total payoff: {self.player1_total_payoff}
     Player 1 avg. payoff: {self.player1_total_payoff/len(self.history)}
