@@ -22,7 +22,7 @@ def main():
         game.play(move1, move2)
 
     # End game and print results
-    print(game.end_game(plot_results=True))
+    print(game.end_game(plot_results=True, save_fig=True))
 
 
 if __name__ == "__main__":

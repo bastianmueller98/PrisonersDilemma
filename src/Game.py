@@ -1,3 +1,4 @@
+import os
 from src.GameState import GameState
 from random import choice
 import matplotlib.pyplot as plt
@@ -63,7 +64,14 @@ class Game:
         self.history[-1] = gs
         return gs
 
-    def end_game(self, plot_results=False, average_lines=False):
+    def end_game(
+        self,
+        plot_results=False,
+        average_lines=False,
+        save_fig=False,
+        fig_name=None,
+        fig_dpi=300,
+    ):
         if plot_results:
             player1_payoffs = [x.player1_total_payoff for x in self.history]
             player2_payoffs = [x.player2_total_payoff for x in self.history]
@@ -109,6 +117,17 @@ class Game:
             plt.xlabel("Rounds")
             plt.ylabel("Avg. Payoff")
             plt.legend()
+
+            if save_fig:
+                fig_path = "results"
+                if not os.path.exists(fig_path):
+                    os.mkdir(fig_path)
+                fig_name = (
+                    fig_name or f"game_results_{len(os.listdir(fig_path)) + 1}.png"
+                )
+                fig_path = os.path.join(fig_path, fig_name)
+                plt.savefig(fig_path, dpi=fig_dpi)
+
             plt.show()
 
         return f"""End result after {len(self.history)} rounds:
